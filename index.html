@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anh Hoang</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./fadeInChar.css" />
+    <link rel="stylesheet" href="./fadeOut.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <p id="value" style="display: none">1</p>
+      <div class="video-slide-show">
+        <div class="background-animation">
+          <img src="./assets/images/universe.gif" />
+        </div>
+        <div class="slide slide-1 slide-actived">
+          <div class="title">
+            <div class="text-anim sm-title">
+              <div class="text-blur-in">
+                <span class="char">I</span>
+                <span class="char">n</span>
+                <span class="char"> </span>
+                <span class="char">m</span>
+                <span class="char">e</span>
+                <span class="char">m</span>
+                <span class="char">o</span>
+                <span class="char">r</span>
+                <span class="char">y</span>
+                <span class="char"> </span>
+                <span class="char">o</span>
+                <span class="char">f</span>
+              </div>
+            </div>
+
+            <div class="text-anim lg-title">
+              <div class="text-blur-in">
+                <span class="char">J</span>
+                <span class="char">o</span>
+                <span class="char">s</span>
+                <span class="char">e</span>
+                <span class="char">p</span>
+                <span class="char">h</span>
+                <span class="char space"> </span>
+                <span class="char">N</span>
+                <span class="char">o</span>
+                <span class="char">r</span>
+                <span class="char">m</span>
+                <span class="char">a</span>
+                <span class="char">n</span>
+              </div>
+            </div>
+
+            <p>-------</p>
+            <div class="text-anim date-title">
+              <div class="text-blur-in">
+                <span class="char">F</span>
+                <span class="char">e</span>
+                <span class="char">b</span>
+                <span class="char"> </span>
+                <span class="char">1</span>
+                <span class="char">5</span>
+                <span class="char">,</span>
+                <span class="char"> </span>
+                <span class="char">1</span>
+                <span class="char">9</span>
+                <span class="char">5</span>
+                <span class="char">8</span>
+                <span class="char"> </span>
+                <span class="char">-</span>
+                <span class="char"> </span>
+                <span class="char">M</span>
+                <span class="char">a</span>
+                <span class="char">r</span>
+                <span class="char"> </span>
+                <span class="char">2</span>
+                <span class="char">1</span>
+                <span class="char">,</span>
+                <span class="char"> </span>
+                <span class="char">2</span>
+                <span class="char">0</span>
+                <span class="char">2</span>
+                <span class="char">2</span>
+              </div>
+            </div>
+          </div>
+          <div class="image fade-in-animation">
+            <img src="./assets/images/old-man.png" />
+          </div>
+        </div>
+        <div class="slide slide-2">
+          <div class="title">
+            <div class="text-anim super-lg-title">
+              <div class="text-blur-in">
+                <span class="char">1</span>
+                <span class="char">9</span>
+
+                <span class="char">5</span>
+                <span class="char">8</span>
+              </div>
+            </div>
+
+            <div class="text-anim lg-title">
+              <span class="char" style="--i: 0">A</span>
+              <span class="char space" style="--i: 1"> </span>
+              <span class="char" style="--i: 2">s</span>
+              <span class="char" style="--i: 3">e</span>
+              <span class="char" style="--i: 4">c</span>
+              <span class="char" style="--i: 5">o</span>
+              <span class="char" style="--i: 6">n</span>
+              <span class="char" style="--i: 7">d</span>
+              <span class="char space" style="--i: 8"> </span>
+              <span class="char" style="--i: 9">b</span>
+              <span class="char" style="--i: 10">a</span>
+              <span class="char" style="--i: 11">b</span>
+              <span class="char" style="--i: 12">y</span>
+              <span class="char space" style="--i: 13"> </span>
+            </div>
+            <div class="text-anim lg-title">
+              <span class="char" style="--i: 14">j</span>
+              <span class="char" style="--i: 15">o</span>
+              <span class="char" style="--i: 16">s</span>
+              <span class="char" style="--i: 17">e</span>
+              <span class="char" style="--i: 18">p</span>
+              <span class="char" style="--i: 19">h</span>
+              <span class="char space" style="--i: 20"> </span>
+              <span class="char" style="--i: 21">w</span>
+              <span class="char" style="--i: 22">a</span>
+              <span class="char" style="--i: 23">s</span>
+              <span class="char space" style="--i: 24"> </span>
+              <span class="char" style="--i: 25">b</span>
+              <span class="char" style="--i: 26">o</span>
+              <span class="char" style="--i: 27">r</span>
+              <span class="char" style="--i: 28">n</span>
+              <span class="char" style="--i: 29"> </span>
+            </div>
+          </div>
+          <div class="image fade-in-animation">
+            <img src="./assets/images/baby.jpg" />
+          </div>
+        </div>
+        <!-- <div class="slide slide-3">slide 3</div>
+        <div class="slide slide-4">slide 4</div> -->
+      </div>
+    </div>
+
+    <script>
+      var i = 0;
+      const displayValue = document.getElementById("value");
+
+      
+      function removeActive() {
+        var slideActived = document.querySelector(".slide-actived");
+
+        if (slideActived) {
+          var image = slideActived.querySelector(".image");
+          var title = slideActived.querySelector(".title");
+          image.classList.add("fade-out-animation");
+          title.classList.add("fade-out-animation");
+          var timeOut = setInterval(() => {
+            slideActived.classList.remove("slide-actived");
+            clearInterval(timeOut);
+          }, 1800);
+        }
+      }
+
+      function showActive(index) {
+        var slideActived = document.querySelector(`.slide-${index}`);
+        slideActived.classList.add("slide-actived");
+        console.log(`.slide-${index}`);
+      }
+
+      function increment() {
+        if (i < 4) {
+          i++;
+          displayValue.textContent = i;
+          removeActive();
+          showActive(i);
+        } else {
+          clearInterval(intervalId); // Dừng interval khi i bằng 5
+        }
+      }
+
+      function startVideo() {
+        const intervalId = setInterval(increment, 2400);
+      }
+
+ 
+      startVideo();
+    </script>
+  </body>
+</html>
